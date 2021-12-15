@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StudentMenu">
+
+    <TextView
+        android:id="@+id/hellotxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="86dp"
+        android:layout_marginEnd="224dp"
+        android:text="Hello"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/quizbtn"
+        android:layout_width="190dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="162dp"
+        android:text="QUIZ"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hellotxt" />
+
+    <Button
+        android:id="@+id/gradesbtn"
+        android:layout_width="190dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="212dp"
+        android:layout_marginEnd="162dp"
+        android:text="GRADES"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hellotxt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
