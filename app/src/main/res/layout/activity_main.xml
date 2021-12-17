@@ -1,20 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="wrap_content"
+    android:fillViewport="false">
 
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="BSCS4A CLASS LIST"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="96dp"
-        tools:layout_editor_absoluteY="79dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="260dp"
+            android:layout_height="49dp"
+            android:text="BSCS4A CLASS LIST"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:translationX="80dp"
+            android:translationY="30dp" />
+
+        <TextView
+            android:id="@+id/idNo1"
+            android:layout_width="269dp"
+            android:layout_height="116dp"
+            android:text="ID NO. : 1820345 "
+            android:textSize="18sp"
+            android:translationX="80dp"
+            android:translationY="50dp" />
+
+        <TextView
+            android:id="@+id/studentname1"
+            android:layout_width="269dp"
+            android:layout_height="116dp"
+            android:text="Name: Lanz Montelibano"
+            android:textSize="18sp"
+            android:translationX="80dp"
+            android:translationY="-30dp" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/course1"
+            android:layout_width="269dp"
+            android:layout_height="116dp"
+            android:text="Course: CSP215 "
+            android:textSize="18sp"
+            android:translationX="80dp"
+            android:translationY="-110dp" />
+
+
+        <Button
+            android:id="@+id/btnupdate1"
+            android:layout_width="123dp"
+            android:layout_height="63dp"
+            android:layout_marginStart="159dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="159dp"
+            android:background="#170E0E"
+            android:text="UPDATE"
+            android:textSize="18sp"
+            android:translationX="-20dp"
+            android:translationY="-200dp" />
+
+
+        <TextView
+            android:id="@+id/idNo2"
+            android:layout_width="269dp"
+            android:layout_height="116dp"
+            android:text="ID NO. : 1820345 "
+            android:textSize="18sp"
+            android:translationX="80dp"
+            android:translationY="-130dp" />
+
+        <TextView
+            android:id="@+id/studentname2"
+            android:layout_width="269dp"
+            android:layout_height="116dp"
+            android:text="Name: Juanito Jose Padilla"
+            android:textSize="18sp"
+            android:translationX="80dp"
+            android:translationY="-210dp" />
+
+
+        <TextView
+            android:id="@+id/course2"
+            android:layout_width="269dp"
+            android:layout_height="116dp"
+            android:text="Course: CSP215 "
+            android:textSize="18sp"
+            android:translationX="80dp"
+            android:translationY="-290dp" />
+
+
+        <Button
+            android:id="@+id/btnupdate2"
+            android:layout_width="123dp"
+            android:layout_height="63dp"
+            android:layout_marginStart="159dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="159dp"
+            android:background="#170E0E"
+            android:text="UPDATE"
+            android:textSize="18sp"
+            android:translationX="-20dp"
+            android:translationY="-390dp" />
+
+        <TextView
+            android:id="@+id/idNo3"
+            android:layout_width="269dp"
+            android:layout_height="116dp"
+            android:text="ID NO. : 1820345 "
+            android:textSize="18sp"
+            android:translationX="80dp"
+            android:translationY="-330dp" />
+
+        <TextView
+            android:id="@+id/studentname3"
+            android:layout_width="269dp"
+            android:layout_height="116dp"
+            android:text="Name: Katrina Silawan"
+            android:textSize="18sp"
+            android:translationX="80dp"
+            android:translationY="-410dp" />
+
+
+        <TextView
+            android:id="@+id/course3"
+            android:layout_width="269dp"
+            android:layout_height="116dp"
+            android:text="Course: CSP215 "
+            android:textSize="18sp"
+            android:translationX="80dp"
+            android:translationY="-490dp" />
+
+
+        <Button
+            android:id="@+id/btnupdate3"
+            android:layout_width="123dp"
+            android:layout_height="63dp"
+            android:layout_marginStart="159dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="159dp"
+            android:background="#170E0E"
+            android:text="UPDATE"
+            android:textSize="18sp"
+            android:translationX="-20dp"
+            android:translationY="-600dp" />
+
+
+    </LinearLayout>
+</ScrollView>
+
