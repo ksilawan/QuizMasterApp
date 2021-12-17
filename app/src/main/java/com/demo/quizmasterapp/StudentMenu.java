@@ -31,5 +31,16 @@ public class StudentMenu extends AppCompatActivity {
             }
         });
 
+        gradesbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(StudentMenu.this, StudentGrades.class);
+                startActivity(intent);
+
+            }
+        });
+
+
     }
 }
