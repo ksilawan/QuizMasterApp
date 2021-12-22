@@ -1,293 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:fillViewport="false">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="260dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="56dp"
+        android:text=" ANDROID QUIZ "
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:translationX="-70dp"
+        android:translationY="-10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="260dp"
-            android:layout_height="49dp"
-            android:text="QUIZ BEE"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:translationX="80dp"
-            android:translationY="30dp" />
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="182dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="114dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="115dp"
+        android:text="Timer: "
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-        <TextView
-            android:id="@+id/qn1txt"
-            android:layout_width="269dp"
-            android:layout_height="116dp"
-            android:text="1. 1 + 1"
-            android:textSize="18sp"
-            android:translationX="80dp"
-            android:translationY="50dp" />
+    <TextView
+        android:id="@+id/questiontxt"
+        android:layout_width="269dp"
+        android:layout_height="116dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="90dp"
+        android:text="Question"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:translationX="20dp"
+        android:translationY="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
+    <Button
+        android:id="@+id/ans1"
+        android:layout_width="213dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="70dp"
+        android:background="#170E0E"
+        android:text="ans 1"
+        android:textSize="14sp"
+        android:translationX="-10dp"
+        android:translationY="90dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questiontxt" />
 
-        <Button
-            android:id="@+id/qn1ans1"
-            android:layout_width="213dp"
-            android:layout_height="57dp"
-            android:layout_marginStart="159dp"
-            android:layout_marginTop="44dp"
-            android:layout_marginEnd="159dp"
-            android:background="#170E0E"
-            android:text="2"
-            android:textSize="18sp"
-            android:translationX="-60dp"
-            android:translationY="-20dp" />
+    <Button
+        android:id="@+id/ans2"
+        android:layout_width="213dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="70dp"
+        android:background="#170E0E"
+        android:text="ans 2"
+        android:textSize="14sp"
+        android:translationX="-10dp"
+        android:translationY="90dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ans1" />
 
-
-        <Button
-            android:id="@+id/qn1ans2"
-            android:layout_width="213dp"
-            android:layout_height="57dp"
-            android:layout_marginStart="159dp"
-            android:layout_marginTop="44dp"
-            android:layout_marginEnd="159dp"
-            android:background="#170E0E"
-            android:text="3"
-            android:textSize="18sp"
-            android:translationX="-60dp"
-            android:translationY="-40dp" />
-
-        <Button
-            android:id="@+id/qn1ans3"
-            android:layout_width="213dp"
-            android:layout_height="57dp"
-            android:layout_marginStart="159dp"
-            android:layout_marginTop="44dp"
-            android:layout_marginEnd="159dp"
-            android:background="#170E0E"
-            android:text="4"
-            android:textSize="18sp"
-            android:translationX="-60dp"
-            android:translationY="-60dp" />
-
-        <TextView
-            android:id="@+id/qn2txt"
-            android:layout_width="269dp"
-            android:layout_height="116dp"
-            android:text="2. 1 + 1"
-            android:textSize="18sp"
-            android:translationX="80dp"
-            android:translationY="50dp" />
-
-
-        <Button
-            android:id="@+id/qn2ans1"
-            android:layout_width="213dp"
-            android:layout_height="57dp"
-            android:layout_marginStart="159dp"
-            android:layout_marginTop="44dp"
-            android:layout_marginEnd="159dp"
-            android:background="#170E0E"
-            android:text="2"
-            android:textSize="18sp"
-            android:translationX="-60dp"
-            android:translationY="-20dp" />
-
-
-        <Button
-            android:id="@+id/qn2ans2"
-            android:layout_width="213dp"
-            android:layout_height="57dp"
-            android:layout_marginStart="159dp"
-            android:layout_marginTop="44dp"
-            android:layout_marginEnd="159dp"
-            android:background="#170E0E"
-            android:text="3"
-            android:textSize="18sp"
-            android:translationX="-60dp"
-            android:translationY="-40dp" />
-
-        <Button
-            android:id="@+id/qn2ans3"
-            android:layout_width="213dp"
-            android:layout_height="57dp"
-            android:layout_marginStart="159dp"
-            android:layout_marginTop="44dp"
-            android:layout_marginEnd="159dp"
-            android:background="#170E0E"
-            android:text="4"
-            android:textSize="18sp"
-            android:translationX="-60dp"
-            android:translationY="-60dp" />
+    <Button
+        android:id="@+id/ans3"
+        android:layout_width="213dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="70dp"
+        android:background="#170E0E"
+        android:text="ans 3"
+        android:textSize="14sp"
+        android:translationX="-10dp"
+        android:translationY="90dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ans2" />
 
 
-        <TextView
-            android:id="@+id/qn3txt"
-            android:layout_width="269dp"
-            android:layout_height="116dp"
-            android:text="3. 1 + 1"
-            android:textSize="18sp"
-            android:translationX="80dp"
-            android:translationY="50dp" />
-
-
-        <Button
-            android:id="@+id/qn3ans1"
-            android:layout_width="213dp"
-            android:layout_height="57dp"
-            android:layout_marginStart="159dp"
-            android:layout_marginTop="44dp"
-            android:layout_marginEnd="159dp"
-            android:background="#170E0E"
-            android:text="2"
-            android:textSize="18sp"
-            android:translationX="-60dp"
-            android:translationY="-20dp" />
-
-
-        <Button
-            android:id="@+id/qn3ans2"
-            android:layout_width="213dp"
-            android:layout_height="57dp"
-            android:layout_marginStart="159dp"
-            android:layout_marginTop="44dp"
-            android:layout_marginEnd="159dp"
-            android:background="#170E0E"
-            android:text="3"
-            android:textSize="18sp"
-            android:translationX="-60dp"
-            android:translationY="-40dp" />
-
-        <Button
-            android:id="@+id/qn3ans3"
-            android:layout_width="213dp"
-            android:layout_height="57dp"
-            android:layout_marginStart="159dp"
-            android:layout_marginTop="44dp"
-            android:layout_marginEnd="159dp"
-            android:background="#170E0E"
-            android:text="4"
-            android:textSize="18sp"
-            android:translationX="-60dp"
-            android:translationY="-60dp" />
-
-        <TextView
-            android:id="@+id/qn4txt"
-            android:layout_width="269dp"
-            android:layout_height="116dp"
-            android:text="4. 1 + 1"
-            android:textSize="18sp"
-            android:translationX="80dp"
-            android:translationY="50dp" />
-
-
-        <Button
-            android:id="@+id/qn4ans1"
-            android:layout_width="213dp"
-            android:layout_height="57dp"
-            android:layout_marginStart="159dp"
-            android:layout_marginTop="44dp"
-            android:layout_marginEnd="159dp"
-            android:background="#170E0E"
-            android:text="2"
-            android:textSize="18sp"
-            android:translationX="-60dp"
-            android:translationY="-20dp" />
-
-
-        <Button
-            android:id="@+id/qn4ans2"
-            android:layout_width="213dp"
-            android:layout_height="57dp"
-            android:layout_marginStart="159dp"
-            android:layout_marginTop="44dp"
-            android:layout_marginEnd="159dp"
-            android:background="#170E0E"
-            android:text="3"
-            android:textSize="18sp"
-            android:translationX="-60dp"
-            android:translationY="-40dp" />
-
-        <Button
-            android:id="@+id/qn4ans3"
-            android:layout_width="213dp"
-            android:layout_height="57dp"
-            android:layout_marginStart="159dp"
-            android:layout_marginTop="44dp"
-            android:layout_marginEnd="159dp"
-            android:background="#170E0E"
-            android:text="4"
-            android:textSize="18sp"
-            android:translationX="-60dp"
-            android:translationY="-60dp" />
-
-
-        <TextView
-            android:id="@+id/qn5txt"
-            android:layout_width="269dp"
-            android:layout_height="116dp"
-            android:text="5. 1 + 1"
-            android:textSize="18sp"
-            android:translationX="80dp"
-            android:translationY="50dp" />
-
-
-        <Button
-            android:id="@+id/qn5ans1"
-            android:layout_width="213dp"
-            android:layout_height="57dp"
-            android:layout_marginStart="159dp"
-            android:layout_marginTop="44dp"
-            android:layout_marginEnd="159dp"
-            android:background="#170E0E"
-            android:text="2"
-            android:textSize="18sp"
-            android:translationX="-60dp"
-            android:translationY="-20dp" />
-
-
-        <Button
-            android:id="@+id/qn5ans2"
-            android:layout_width="213dp"
-            android:layout_height="57dp"
-            android:layout_marginStart="159dp"
-            android:layout_marginTop="44dp"
-            android:layout_marginEnd="159dp"
-            android:background="#170E0E"
-            android:text="3"
-            android:textSize="18sp"
-            android:translationX="-60dp"
-            android:translationY="-40dp" />
-
-        <Button
-            android:id="@+id/qn5ans3"
-            android:layout_width="213dp"
-            android:layout_height="57dp"
-            android:layout_marginStart="159dp"
-            android:layout_marginTop="44dp"
-            android:layout_marginEnd="159dp"
-            android:background="#170E0E"
-            android:text="4"
-            android:textSize="18sp"
-            android:translationX="-60dp"
-            android:translationY="-60dp" />
-
-        <Button
-            android:id="@+id/btnsubmit"
-            android:layout_width="213dp"
-            android:layout_height="57dp"
-            android:layout_marginStart="159dp"
-            android:layout_marginTop="44dp"
-            android:layout_marginEnd="159dp"
-            android:background="#170E0E"
-            android:text="SUBMIT"
-            android:textSize="18sp"
-            android:translationX="-60dp"
-            android:translationY="-60dp" />
-
-
-    </LinearLayout>
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
