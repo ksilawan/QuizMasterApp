@@ -19,7 +19,6 @@ public class InputGrades extends AppCompatActivity {
         EditText evaluateInput;
         TextView finalGrade;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,8 +35,18 @@ public class InputGrades extends AppCompatActivity {
         computebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String engage = engageInput.getText().toString();
+                String explain = explainInput.getText().toString();
+                String elab = elabInput.getText().toString();
+                String explore = exploreInput.getText().toString();
+                String eval = evaluateInput.getText().toString();
 
                 Intent intent = new Intent(InputGrades.this, DisplayGrades.class);
+                intent.putExtra("Engage", engage);
+                intent.putExtra("Explain", explain);
+                intent.putExtra("Elab", elab);
+                intent.putExtra("Explore", explore);
+                intent.putExtra("Eval", eval);
                 startActivity(intent);
 
             }
