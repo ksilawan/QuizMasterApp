@@ -49,7 +49,7 @@ public class QuestionModel {
         return correctAnsNo;
     }
 
-    public void setCorrectAnsNo(int correstAnsNo) {
+    public void setCorrectAnsNo(int correctAnsNo) {
         this.correctAnsNo = correctAnsNo;
     }
 }

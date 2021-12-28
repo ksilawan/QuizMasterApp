@@ -3,6 +3,7 @@ package com.demo.quizmasterapp;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -29,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
     ColorStateList dfRbColor;
     boolean answered;
 
+    CountDownTimer countDownTimer;
+
     private QuestionModel currentQuestion;
 
 
@@ -45,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         questiontxt = findViewById(R.id.questiontxt);
         timer = findViewById(R.id.timer);
         scoretxt = findViewById(R.id.scoretxt);
-        questiontxt = findViewById(R.id.questionNo);
+        questionNo = findViewById(R.id.questionNo);
 
 
         radioGroup = findViewById(R.id.radioGroup);
@@ -66,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
                 if(answered == false){
                     if(rb1.isChecked() || rb2.isChecked() || rb3.isChecked()){
                         checkAnswer();
+                        countDownTimer.cancel();
 
                     }else{
                         Toast.makeText(MainActivity.this, "Please select an option", Toast.LENGTH_SHORT).show();
@@ -123,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         if(qnCounter < totalQuestions){
+            timerCount();
             currentQuestion = questionsList.get(qnCounter);
             questiontxt.setText(currentQuestion.getQuestion());
             rb1.setText(currentQuestion.getAns1());
@@ -130,7 +135,8 @@ public class MainActivity extends AppCompatActivity {
             rb3.setText(currentQuestion.getAns3());
 
             qnCounter++;
-            questiontxt.setText("Question: " + qnCounter + "/" + totalQuestions);
+            btnNext.setText(("Submit"));
+            questionNo.setText("Question: " + qnCounter + "/" + totalQuestions);
             answered = false;
         }
         else{
@@ -139,6 +145,21 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    }
+
+    private void timerCount() {
+
+        countDownTimer = new CountDownTimer(20000, 1000) {
+            @Override
+            public void onTick(long l) {
+                timer.setText("00:" + 1/1000);
+            }
+
+            @Override
+            public void onFinish() {
+                showNextQuestion();
+            }
+        }.start();
     }
 
     private void addQuestions(){
