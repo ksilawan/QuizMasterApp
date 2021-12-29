@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizMasterApp">
         <activity android:name=".StudentGrades"></activity>
-        <activity android:name=".QuizPage" />
         <activity android:name=".StudentMenu" />
         <activity android:name=".MainActivity">
             <intent-filter>
