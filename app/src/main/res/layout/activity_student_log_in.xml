@@ -4,67 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".studentLogIn">
+    tools:context=".StudentLogIn">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="173dp"
-        android:layout_marginTop="88dp"
-        android:layout_marginEnd="179dp"
-        android:text="STUDENT LOG IN"
-        android:textSize="24sp"
+        android:layout_width="205dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginEnd="103dp"
+        android:text="Student Log In"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-
     <EditText
-        android:id="@+id/studentname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="162dp"
-        android:layout_marginEnd="101dp"
+        android:id="@+id/usernametxt"
+        android:layout_width="248dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="82dp"
         android:ems="10"
-
-        android:hint="Enter Name"
         android:inputType="textPersonName"
+        android:hint="Enter username"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/studentpass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="101dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="100dp"
+        android:id="@+id/passwordtxt"
+        android:layout_width="249dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="79dp"
         android:ems="10"
-        android:autofillHints=""
-
-        android:hint="Enter Password"
         android:inputType="textPersonName"
+        android:hint="Enter password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/studentname" />
+        app:layout_constraintTop_toBottomOf="@+id/usernametxt" />
 
     <Button
-        android:id="@+id/loginbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="163dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="160dp"
-        android:text="Log in"
+        android:id="@+id/btnlogin"
+        android:layout_width="151dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="74dp"
+        android:layout_marginEnd="130dp"
+        android:text="Log In"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/studentpass" />
-
-
+        app:layout_constraintTop_toBottomOf="@+id/passwordtxt" />
 </androidx.constraintlayout.widget.ConstraintLayout>

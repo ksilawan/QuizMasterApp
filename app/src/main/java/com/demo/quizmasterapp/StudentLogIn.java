@@ -7,24 +7,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class OptionPage extends AppCompatActivity {
+public class StudentLogIn extends AppCompatActivity {
 
-    Button btnstudent;
-
+    Button btnlogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_option_page);
+        setContentView(R.layout.activity_student_log_in);
 
-        btnstudent = findViewById(R.id.btnstudent);
+        btnlogin = findViewById(R.id.btnlogin);
 
 
-        btnstudent.setOnClickListener(new View.OnClickListener() {
+        btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(OptionPage.this, StudentLogIn.class);
+                Intent intent = new Intent(StudentLogIn.this, StudentMainMenu.class);
                 startActivity(intent);
 
 

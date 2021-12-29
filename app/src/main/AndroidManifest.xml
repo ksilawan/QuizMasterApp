@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizMasterApp">
-        <activity android:name=".OptionPage"></activity>
-        <activity android:name=".studentLogIn" />
+        <activity android:name=".StudentLogIn"></activity>
+        <activity android:name=".StudentMainMenu" />
+        <activity android:name=".OptionPage" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
