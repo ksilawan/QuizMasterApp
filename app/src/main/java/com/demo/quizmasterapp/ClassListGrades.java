@@ -14,7 +14,7 @@ public class ClassListGrades extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_class_list_grades);
 
         btnupdate1 = (Button) findViewById(R.id.btnupdate1);
 
