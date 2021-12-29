@@ -7,7 +7,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class ClassListGrades extends AppCompatActivity {
 
     Button btnupdate1;
 
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(MainActivity.this, InputGrades.class);
+                Intent intent = new Intent(ClassListGrades.this, InputGrades.class);
                 startActivity(intent);
 
             }

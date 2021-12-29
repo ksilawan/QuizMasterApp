@@ -11,7 +11,7 @@
         android:theme="@style/Theme.QuizMasterApp">
         <activity android:name=".DisplayGrades"></activity>
         <activity android:name=".InputGrades" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".ClassListGrades">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
