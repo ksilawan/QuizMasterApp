@@ -9,27 +9,13 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
-
-    Button loginbtn;
-
+public class studentLogIn extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        loginbtn = (Button) findViewById(R.id.loginbtn);
-
-        loginbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent intent = new Intent(MainActivity.this, StudentMenu.class);
-                startActivity(intent);
-
-            }
-        });
 
 
     }
