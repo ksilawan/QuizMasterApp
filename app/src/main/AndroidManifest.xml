@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizMasterApp">
-        <activity android:name=".StudentGradesDisplayPage"></activity>
+        <activity android:name=".TeacherMainMenu"></activity>
+        <activity android:name=".TeacherLogIn" />
+        <activity android:name=".StudentGradesDisplayPage" />
         <activity android:name=".StudentLogIn" />
         <activity android:name=".StudentMainMenu" />
         <activity android:name=".OptionPage" />

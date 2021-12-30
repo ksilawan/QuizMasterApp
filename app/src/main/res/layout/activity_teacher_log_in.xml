@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TeacherLogIn">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="205dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginEnd="103dp"
+        android:text="Teacher Log In"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/usernametxt"
+        android:layout_width="248dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="82dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Enter username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/passwordtxt"
+        android:layout_width="249dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="79dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Enter password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernametxt" />
+
+    <Button
+        android:id="@+id/btnlogin"
+        android:layout_width="151dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="74dp"
+        android:layout_marginEnd="130dp"
+        android:text="Log In"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordtxt" />
+</androidx.constraintlayout.widget.ConstraintLayout>
