@@ -31,5 +31,13 @@ public class TeacherMainMenu extends AppCompatActivity {
             }
         });
 
+        btnattendance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TeacherMainMenu.this, Attendance.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
