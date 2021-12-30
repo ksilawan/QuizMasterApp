@@ -10,6 +10,7 @@ import android.widget.Button;
 public class OptionPage extends AppCompatActivity {
 
     Button btnstudent;
+    Button btnteacher;
 
 
     @Override
@@ -18,6 +19,8 @@ public class OptionPage extends AppCompatActivity {
         setContentView(R.layout.activity_option_page);
 
         btnstudent = findViewById(R.id.btnstudent);
+        btnteacher = findViewById(R.id.btnteacher);
+
 
 
         btnstudent.setOnClickListener(new View.OnClickListener() {
@@ -27,9 +30,19 @@ public class OptionPage extends AppCompatActivity {
                 Intent intent = new Intent(OptionPage.this, StudentLogIn.class);
                 startActivity(intent);
 
-
             }
 
+        });
+
+
+        btnteacher.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(OptionPage.this, TeacherLogIn.class);
+                startActivity(intent);
+
+            }
 
         });
 
