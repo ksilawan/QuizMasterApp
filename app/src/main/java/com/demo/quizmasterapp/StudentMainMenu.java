@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class StudentMainMenu extends AppCompatActivity {
 
-    Button btngrades;
+    Button btngetquiz;
 
 
     @Override
@@ -17,10 +17,10 @@ public class StudentMainMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_main_menu);
 
-        btngrades = findViewById(R.id.btngrades);
+        btngetquiz = findViewById(R.id.btngetquiz);
 
 
-        btngrades.setOnClickListener(new View.OnClickListener() {
+        btngetquiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
