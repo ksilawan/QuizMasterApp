@@ -9,6 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizMasterApp">
+        <activity android:name=".DisplayGrades"/>
+        <activity android:name=".InputGrades" />
+        <activity android:name=".ClassListGrades"/>
         <activity android:name=".QuizOverPage" />
         <activity android:name=".QuizPage"/>
         <activity android:name=".TeacherMainMenu"/>

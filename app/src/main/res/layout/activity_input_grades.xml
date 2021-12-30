@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="false">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".InputGrades">
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="209dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="176dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="176dp"
+            android:text="Term Grade Calculator"
+            android:textSize="18sp"
+            android:translationX="-60dp "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/module1Title"
+            android:layout_width="141dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="176dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="176dp"
+            android:text="MODULE 1"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:translationX="-40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <TextView
+            android:id="@+id/engagetxt"
+            android:layout_width="92dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="310dp"
+            android:text="Engage: "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/module1Title" />
+
+
+        <EditText
+            android:id="@+id/engageInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="82dp"
+            android:ems="10"
+            android:hint="Enter Engage Score"
+            android:inputType="textPersonName"
+            android:translationX="120dp"
+            android:translationY="-80dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/engagetxt"
+            app:layout_constraintTop_toBottomOf="@+id/module1Title" />
+
+        <TextView
+            android:id="@+id/explaintxt"
+            android:layout_width="91dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="144dp"
+            android:layout_marginEnd="310dp"
+            android:text="Explain: "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:translationY="-190dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/module1Title" />
+
+        <EditText
+            android:id="@+id/explainInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="128dp"
+            android:layout_marginEnd="82dp"
+            android:ems="10"
+            android:hint="Enter Explain Score"
+            android:inputType="textPersonName"
+            android:translationX="130dp"
+            android:translationY="-370dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/engagetxt"
+            app:layout_constraintTop_toBottomOf="@+id/module1Title" />
+
+        <TextView
+            android:id="@+id/elabtxt"
+            android:layout_width="112dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="144dp"
+            android:layout_marginEnd="310dp"
+            android:text="Elaboration: "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:translationY="-480dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/module1Title" />
+
+        <EditText
+            android:id="@+id/elabInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="128dp"
+            android:layout_marginEnd="82dp"
+            android:ems="10"
+            android:hint="Enter Elaboration Score"
+            android:inputType="textPersonName"
+            android:translationX="130dp"
+            android:translationY="-670dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/elabtxt"
+            app:layout_constraintTop_toBottomOf="@+id/module1Title" />
+
+        <TextView
+            android:id="@+id/exploretxt"
+            android:layout_width="112dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="144dp"
+            android:layout_marginEnd="310dp"
+            android:text="Explore: "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:translationY="-780dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/module1Title" />
+
+        <EditText
+            android:id="@+id/exploreInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="128dp"
+            android:layout_marginEnd="82dp"
+            android:ems="10"
+            android:hint="Enter Explore Score"
+            android:inputType="textPersonName"
+            android:translationX="130dp"
+            android:translationY="-970dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/exploretxt"
+            app:layout_constraintTop_toBottomOf="@+id/module1Title" />
+
+
+        <TextView
+            android:id="@+id/evalutetxt"
+            android:layout_width="112dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="144dp"
+            android:layout_marginEnd="310dp"
+            android:text="Evaluate: "
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:translationY="-1080dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/module1Title" />
+
+        <EditText
+            android:id="@+id/evaluateInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="128dp"
+            android:layout_marginEnd="82dp"
+            android:ems="10"
+            android:hint="Enter Evaluate Score"
+            android:inputType="textPersonName"
+            android:translationX="130dp"
+            android:translationY="-1270dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/evalutetxt"
+            app:layout_constraintTop_toBottomOf="@+id/module1Title" />
+
+
+        <Button
+            android:id="@+id/computebtn"
+            android:layout_width="173dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="163dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="160dp"
+            android:text="Compute"
+            android:textSize="18sp"
+            android:translationX="-40dp"
+            android:translationY="-1300dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/evaluateInput" />
+
+
+    </LinearLayout>
+</ScrollView>
