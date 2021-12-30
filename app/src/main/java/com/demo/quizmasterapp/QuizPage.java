@@ -16,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class QuizPage extends AppCompatActivity {
 
     private TextView questiontxt, timer, scoretxt, questionNo;
     private RadioGroup radioGroup;
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.quizpage);
 
 
         questionsList = new ArrayList<>();
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
                         countDownTimer.cancel();
 
                     }else{
-                        Toast.makeText(MainActivity.this, "Please select an option", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(QuizPage.this, "Please select an option", Toast.LENGTH_SHORT).show();
                     }
                 }else{
                     showNextQuestion();

@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizMasterApp">
         <activity android:name=".DisplayQuizScore" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".QuizPage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
