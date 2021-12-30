@@ -8,13 +8,14 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class QuizOverPage extends AppCompatActivity {
 
     Button btnstart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
 
         btnstart = (Button) findViewById(R.id.btnstart);
@@ -22,10 +23,11 @@ public class MainActivity extends AppCompatActivity {
         btnstart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, OptionPage.class);
+                Intent intent = new Intent(QuizOverPage.this, OptionPage.class);
                 startActivity(intent);
             }
         });
+        setContentView(R.layout.quizoverpage);
     }
 
 }
