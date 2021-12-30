@@ -1,5 +1,6 @@
 package com.demo.quizmasterapp;
 
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -15,13 +16,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class QuizPage extends AppCompatActivity {
 
-    private TextView questiontxt, timer, scoretxt, questionNo;
+    private TextView questiontxt, scoretxt, questionNo, timer;
     private RadioGroup radioGroup;
     private RadioButton rb1, rb2, rb3;
     private Button btnNext;
+
+    private Timer quizTimer;
+    private int seconds = 0;
+
 
     int totalQuestions;
     int qnCounter = 0;
@@ -30,7 +37,7 @@ public class QuizPage extends AppCompatActivity {
     ColorStateList dfRbColor;
     boolean answered;
 
-    CountDownTimer countDownTimer;
+    //CountDownTimer countDownTimer;
 
     private QuestionModel currentQuestion;
 
@@ -42,7 +49,6 @@ public class QuizPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quizpage);
-
 
         questionsList = new ArrayList<>();
         questiontxt = findViewById(R.id.questiontxt);
@@ -59,9 +65,14 @@ public class QuizPage extends AppCompatActivity {
 
         dfRbColor = rb1.getTextColors();
 
+        startTimer(timer);
         addQuestions();
         totalQuestions = questionsList.size();
         showNextQuestion();
+
+
+
+
 
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,7 +80,7 @@ public class QuizPage extends AppCompatActivity {
                 if(answered == false){
                     if(rb1.isChecked() || rb2.isChecked() || rb3.isChecked()){
                         checkAnswer();
-                        countDownTimer.cancel();
+                        //countDownTimer.cancel();
 
                     }else{
                         Toast.makeText(QuizPage.this, "Please select an option", Toast.LENGTH_SHORT).show();
@@ -81,6 +92,53 @@ public class QuizPage extends AppCompatActivity {
         });
 
     }
+
+
+    private void startTimer(TextView timerTextView){
+
+        quizTimer = new Timer();
+
+        quizTimer.scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+
+                if(seconds == 0){
+                    seconds = 20;
+                }
+                else if(seconds == 0){
+
+                    quizTimer.purge();
+                    quizTimer.cancel();
+
+                    Toast.makeText(QuizPage.this, "Time Over!!!", Toast.LENGTH_SHORT).show();
+
+                    Intent intent = new Intent(QuizPage.this, QuizOverPage.class);
+                    startActivity(intent);
+
+                    finish();
+                }
+                else{
+                    seconds--;
+                }
+
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        String finalSeconds = String.valueOf(seconds);
+
+                        if(finalSeconds.length() == 1){
+                            finalSeconds = "0" + finalSeconds;
+                        }
+
+                        timerTextView.setText("00:" + finalSeconds);
+                    }
+                });
+            }
+
+        }, 1000, 1000);
+    }
+
 
     private void checkAnswer() {
         answered = true;
@@ -109,10 +167,10 @@ public class QuizPage extends AppCompatActivity {
 
         }
         if(qnCounter < totalQuestions){
-            btnNext.setText("Next");
+            btnNext.setText("Submit");
         }
         else{
-            btnNext.setText("Submit");
+            btnNext.setText("Finish");
         }
     }
 
@@ -127,7 +185,7 @@ public class QuizPage extends AppCompatActivity {
 
 
         if(qnCounter < totalQuestions){
-            timerCount();
+            //timerCount();
             currentQuestion = questionsList.get(qnCounter);
             questiontxt.setText(currentQuestion.getQuestion());
             rb1.setText(currentQuestion.getAns1());
@@ -135,19 +193,22 @@ public class QuizPage extends AppCompatActivity {
             rb3.setText(currentQuestion.getAns3());
 
             qnCounter++;
-            btnNext.setText(("Submit"));
+            btnNext.setText(("Next"));
             questionNo.setText("Question: " + qnCounter + "/" + totalQuestions);
             answered = false;
         }
         else{
+
+            Intent intent = new Intent(QuizPage.this, QuizOverPage.class);
+            startActivity(intent);
+
+
             finish();
         }
 
-
-
     }
 
-    private void timerCount() {
+    /* private void timerCount() {
 
         countDownTimer = new CountDownTimer(20000, 1000) {
             @Override
@@ -161,6 +222,8 @@ public class QuizPage extends AppCompatActivity {
             }
         }.start();
     }
+
+*/
 
     private void addQuestions(){
         questionsList.add(new QuestionModel("1. What is splash screen in android?", "A - Initial activity of an application",

@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class DisplayQuizScore extends AppCompatActivity {
+public class QuizOverPage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_display_quiz_score);
+        setContentView(R.layout.quizoverpage);
     }
 }
