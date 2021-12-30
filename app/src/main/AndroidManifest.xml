@@ -20,6 +20,7 @@
         <activity android:name=".StudentLogIn" />
         <activity android:name=".StudentMainMenu" />
         <activity android:name=".OptionPage" />
+        <activity android:name=".Attendance"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
